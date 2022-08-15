@@ -160,11 +160,85 @@ button{
 main{
     background-color: #CBD5E1 ; /* à changer ou enlever */
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3.5fr 1fr;
     padding: 1.25em 2.5em;
     z-index: 1;
 }
 
         /* --------- Social media -----------*/
+main > .social-media{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
 
+main > .social-media > div > div{
+    border: 0.5px solid dashed;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+    
+}
 
+main h4{
+    margin-bottom: 15px;
+}
+
+main > .social-media > div > div > .description > p{
+    font-size: 0.8em;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: grey;
+}
+
+main > .social-media > div > div > .description:not(:last-child){
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
+}
+
+main > .social-media > div > div > .description:not(:last-child) > p,
+main > .social-media > div > div > ul:not(:last-child){
+    margin-bottom: 20px;
+}
+
+main > .social-media > div > div > ul{
+    display: flex;
+    gap: 20px;
+}
+
+main > .social-media > .trending > div > ul > li:last-child > ul > li:first-child{
+    font-weight: 500;
+}
+
+main > .social-media > .trending > div > ul > li:last-child > ul > li:first-child + li{
+    font-size: 0.9em;
+    color: grey;
+}
+
+        /* --------- project -----------*/
+
+main > .presentation > .projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-right: 20px;
+}
+
+main > .presentation > .projects > .project{
+    border: 0.5px solid dashed;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main > .presentation > .projects > .project > ul{
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+    margin-top: 10px;
+}
